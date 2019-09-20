@@ -3,7 +3,7 @@
     <v-navigation-drawer expand-on-hover permanent width="275px" app>
       <template v-slot:prepend>
         <v-list nav dense>
-          <v-list-item to="/profile" two-line>
+          <v-list-item active-class="primary--text" to="/profile" two-line>
             <v-list-item-avatar>
               <v-img src="https://randomuser.me/api/portraits/men/85.jpg" />
             </v-list-item-avatar>
@@ -14,7 +14,7 @@
               <v-list-item-subtitle>Manager</v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
-              <v-icon>{{ mdiAccount }}</v-icon>
+              <v-icon>{{ mdiAccountArrowRight }}</v-icon>
             </v-list-item-action>
           </v-list-item>
         </v-list>
@@ -41,18 +41,6 @@
           </v-list-item-icon>
           <v-list-item-title>Finance</v-list-item-title>
         </v-list-item>
-        <!-- <v-list-item active-class="primary--text" to="/settings">
-          <v-list-item-icon>
-            <v-icon>{{ mdiSettings }}</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>Settings</v-list-item-title>
-        </v-list-item>
-        <v-list-item active-class="primary--text" to="/about">
-          <v-list-item-icon>
-            <v-icon>{{ mdiInformation }}</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>About</v-list-item-title>
-        </v-list-item> -->
       </v-list>
       <template v-slot:append>
         <v-divider />
@@ -78,23 +66,19 @@
 
 <script>
 import {
-  mdiAccount,
+  mdiAccountArrowRight,
   mdiDesktopMacDashboard,
   mdiPill,
   mdiFinance,
-  mdiSettings,
-  mdiInformation,
   mdiLogout
 } from '@mdi/js'
 export default {
   data() {
     return {
-      mdiAccount,
+      mdiAccountArrowRight,
       mdiDesktopMacDashboard,
       mdiPill,
       mdiFinance,
-      mdiSettings,
-      mdiInformation,
       mdiLogout
     }
   }

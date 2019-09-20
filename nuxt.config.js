@@ -31,7 +31,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/apex-charts.js', ssr: false }],
+  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */

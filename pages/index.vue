@@ -16,6 +16,16 @@
 <script>
 export default {
   layout: ({ isMobile }) => (isMobile ? 'mobile' : 'default'),
+  head: () => ({
+    title: 'Dashboard',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Dashboard for your pharmacy management'
+      }
+    ]
+  }),
   data: () => ({
     options: {
       chart: {

@@ -6,15 +6,16 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s - ' + 'Dawai',
+    title: 'Dawai',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content:
+          'Find any medicine you need by location. Manage your pharmacys inventory, sales and finances with a beautiful dashboard'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -50,7 +51,7 @@ export default {
         url: 'https://dawai.herokuapp.com',
         title: 'Dawai - Medicine Locator and Pharmacy Management',
         description:
-          'Find any medicine you need by location. Manage your pharmacys inventory and sales.',
+          'Find any medicine you need by location. Manage your pharmacys inventory, sales and finances with a beautiful dashboard.',
         locale: 'en-US',
         twitter: '@_phr3nzy',
         img: '/logo-text-whitebg.png',

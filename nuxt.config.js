@@ -151,7 +151,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    vendor: ['apex-charts'],
     extend(config, ctx) {}
   }
 }

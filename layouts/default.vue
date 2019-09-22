@@ -5,13 +5,15 @@
         <v-list nav dense>
           <v-list-item active-class="primary--text" to="/profile" two-line>
             <v-list-item-avatar>
-              <v-img src="https://randomuser.me/api/portraits/men/85.jpg" />
+              <v-img
+                src="https://avatars3.githubusercontent.com/u/16164793?s=400&u=c1453ab8a42a7ce9176eedb312eb2b51a0a1800e&v=4"
+              />
             </v-list-item-avatar>
             <v-list-item-content>
               <v-list-item-title class="title">
-                John Adams
+                Osama Adil
               </v-list-item-title>
-              <v-list-item-subtitle>Manager</v-list-item-subtitle>
+              <v-list-item-subtitle>Owner</v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
               <v-icon>{{ mdiAccountArrowRight }}</v-icon>
@@ -37,7 +39,7 @@
         </v-list-item>
         <v-list-item active-class="primary--text" to="/finance">
           <v-list-item-icon>
-            <v-icon>{{ mdiFinance }}</v-icon>
+            <v-icon>{{ mdiCashMultiple }}</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Finance</v-list-item-title>
         </v-list-item>
@@ -69,7 +71,7 @@ import {
   mdiAccountArrowRight,
   mdiDesktopMacDashboard,
   mdiPill,
-  mdiFinance,
+  mdiCashMultiple,
   mdiLogout
 } from '@mdi/js'
 export default {
@@ -78,7 +80,7 @@ export default {
       mdiAccountArrowRight,
       mdiDesktopMacDashboard,
       mdiPill,
-      mdiFinance,
+      mdiCashMultiple,
       mdiLogout
     }
   }

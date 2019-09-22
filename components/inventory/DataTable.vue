@@ -38,6 +38,32 @@
       multi-sort
       @page-count="pageCount = $event"
     >
+      <template v-slot:item.expiry="{ item }">
+        <v-progress-linear
+          v-if="item.expiry >= 75 && item.expiry <= 100"
+          color="green lighten-1"
+          height="10"
+          rounded
+          striped
+          :value="item.expiry"
+        ></v-progress-linear>
+        <v-progress-linear
+          v-else-if="item.expiry <= 74 && item.expiry >= 25"
+          color="orange darken-1"
+          height="10"
+          rounded
+          striped
+          :value="item.expiry"
+        ></v-progress-linear>
+        <v-progress-linear
+          v-else
+          color="red darken-1"
+          height="10"
+          rounded
+          striped
+          :value="item.expiry"
+        ></v-progress-linear>
+      </template>
       <template v-slot:item.price="{ item }">
         <span
           >{{ item.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') }}
@@ -128,6 +154,7 @@ export default {
       },
       { text: 'Quantity', align: 'center', value: 'quantity' },
       { text: 'Price', align: 'center', value: 'price' },
+      { text: 'Expiry', align: 'center', value: 'expiry' },
       { text: 'Availability', align: 'right', value: 'availability' },
       { text: 'Actions', value: 'action', sortable: false, align: 'center' }
     ],
@@ -136,30 +163,35 @@ export default {
         name: 'Panadol',
         quantity: 15,
         price: 40,
+        expiry: '88',
         availability: true
       },
       {
         name: 'Ibuprofen',
         quantity: 28,
         price: 60,
+        expiry: '95',
         availability: true
       },
       {
         name: 'Paracetamol',
         quantity: 43,
         price: 55,
+        expiry: '33',
         availability: true
       },
       {
         name: 'Panadol Extra',
         quantity: 89,
         price: 800,
+        expiry: '49',
         availability: false
       },
       {
         name: 'Panadol Lite',
         quantity: 99,
         price: 1200,
+        expiry: '12',
         availability: false
       }
     ]

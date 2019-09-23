@@ -48,59 +48,57 @@
           <v-card-title>
             <span class="headline">{{ formTitle }}</span>
           </v-card-title>
-          <v-card-text>
-            <v-container>
-              <v-row dense>
-                <v-col cols="12">
-                  <v-text-field
-                    v-model="editedItem.name"
-                    label="Medicine Name"
-                    :prepend-inner-icon="mdiRenameBox"
-                    type="text"
-                    outlined
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="12" sm="6">
-                  <v-text-field
-                    v-model="editedItem.price"
-                    label="Price"
-                    type="number"
-                    :prepend-inner-icon="mdiCurrencyUsd"
-                    outlined
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="12" sm="6">
-                  <v-text-field
-                    v-model="editedItem.expiry"
-                    label="Expiry"
-                    :prepend-inner-icon="mdiCalendarAlert"
-                    outlined
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="12">
-                  <v-slider
-                    v-model="editedItem.quantity"
-                    label="Quantity"
-                    max="100"
-                    min="0"
-                    thumb-label
-                    step="1"
-                  ></v-slider>
-                </v-col>
-                <v-col cols="12">
-                  <v-checkbox
-                    v-model="editedItem.availability"
-                    label="Availability"
-                    color="primary"
-                    :on-icon="mdiCheckboxMarked"
-                    :off-icon="mdiCheckboxBlankOutline"
-                  ></v-checkbox>
-                </v-col>
-              </v-row>
-            </v-container>
+          <v-card-text class="pb-0">
+            <v-row dense>
+              <v-col cols="12">
+                <v-text-field
+                  v-model="editedItem.name"
+                  label="Medicine Name"
+                  :prepend-inner-icon="mdiRenameBox"
+                  type="text"
+                  outlined
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6">
+                <v-text-field
+                  v-model="editedItem.price"
+                  label="Price"
+                  type="number"
+                  :prepend-inner-icon="mdiCurrencyUsd"
+                  outlined
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6">
+                <v-text-field
+                  v-model="editedItem.expiry"
+                  label="Expiry"
+                  :prepend-inner-icon="mdiCalendarAlert"
+                  outlined
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-slider
+                  v-model="editedItem.quantity"
+                  label="Quantity"
+                  max="100"
+                  min="0"
+                  thumb-label
+                  step="1"
+                ></v-slider>
+              </v-col>
+              <v-col cols="12">
+                <v-checkbox
+                  v-model="editedItem.availability"
+                  label="Available"
+                  color="primary"
+                  :on-icon="mdiCheckboxMarked"
+                  :off-icon="mdiCheckboxBlankOutline"
+                ></v-checkbox>
+              </v-col>
+            </v-row>
           </v-card-text>
 
-          <v-card-actions>
+          <v-card-actions class="pa-5">
             <div class="flex-grow-1"></div>
             <v-btn color="red" text @click="close"
               >Cancel <v-icon right>{{ mdiClose }}</v-icon></v-btn

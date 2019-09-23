@@ -3,6 +3,9 @@
     <v-flex xs12>
       <MainSheet />
     </v-flex>
+    <v-flex xs12>
+      <DisplaySheets />
+    </v-flex>
     <v-flex xs12 sm6 md4>
       <v-card flat>
         <LineChart />
@@ -32,6 +35,7 @@ import LineChart from '@/components/charts/LineChart'
 import PieChart from '@/components/charts/PieChart'
 import HorizontalBarChart from '@/components/charts/HorizontalBarChart'
 import TimeChart from '@/components/charts/TimeChart'
+import DisplaySheets from '@/components/DisplaySheets'
 export default {
   layout: ({ isMobile }) => (isMobile ? 'mobile' : 'default'),
   components: {
@@ -39,7 +43,8 @@ export default {
     LineChart,
     PieChart,
     HorizontalBarChart,
-    TimeChart
+    TimeChart,
+    DisplaySheets
   },
   head: () => ({
     title: 'Dashboard'

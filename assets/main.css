@@ -20,7 +20,7 @@ body {
 }
 
 .main-gradient {
-  background: linear-gradient(to right bottom, #3A005F, #64D977)!important;
+  background: linear-gradient(to bottom, #3A005F,  rgb(39, 24, 126),  rgb(20, 81, 143),  #2571BF)!important;
 }
 
 .inset-shadow {

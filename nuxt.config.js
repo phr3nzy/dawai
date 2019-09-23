@@ -44,7 +44,8 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage'nuxt-helmet',
+    // Doc: https://axios.nuxtjs.org/usage
+    'nuxt-helmet',
     [
       'nuxt-social-meta',
       {

@@ -49,7 +49,7 @@ export default {
     [
       'nuxt-social-meta',
       {
-        url: 'https://dawai.herokuapp.com',
+        url: 'https://dawai-ph.herokuapp.com',
         title: 'Dawai - Medicine Locator and Pharmacy Management',
         description:
           'Find any medicine you need by location. Manage your pharmacys inventory, sales and finances with a beautiful dashboard.',
@@ -109,7 +109,7 @@ export default {
    ** Sitemap module configuration
    */
   sitemap: {
-    hostname: 'https://dawai.herokuapp.com',
+    hostname: 'https://dawai-ph.herokuapp.com',
     gzip: true,
     routes: ['/']
   },

@@ -10,7 +10,7 @@
     >
       <span class="display-2 font-weight-thin">Inventory</span>
     </v-sheet>
-    <v-card-title>
+    <v-card-title class="mx-5">
       <v-text-field
         v-model="search"
         label="Search Medcine"
@@ -22,93 +22,96 @@
       ></v-text-field>
       <v-spacer></v-spacer>
 
-      <v-btn
-        class="ml-2"
-        large
-        text
-        color="primary"
-        :disabled="loading"
-        @click.stop.prevent="beginLoading"
-        >Refresh <v-icon right>{{ mdiRefresh }}</v-icon></v-btn
-      >
-      <v-dialog v-model="dialog" max-width="500px">
-        <template v-slot:activator="{ on }"
-          ><v-btn
-            class="mr-2"
-            :disabled="loading"
-            large
-            text
-            color="primary"
-            v-on="on"
-            >Add Medicine
-            <v-icon right>{{ mdiPlusCircleOutline }}</v-icon></v-btn
-          >
-        </template>
-        <v-card>
-          <v-card-title>
-            <span class="headline">{{ formTitle }}</span>
-          </v-card-title>
-          <v-card-text class="pb-0">
-            <v-row dense>
-              <v-col cols="12">
-                <v-text-field
-                  v-model="editedItem.name"
-                  label="Medicine Name"
-                  :prepend-inner-icon="mdiRenameBox"
-                  type="text"
-                  outlined
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12" sm="6">
-                <v-text-field
-                  v-model="editedItem.price"
-                  label="Price"
-                  type="number"
-                  :prepend-inner-icon="mdiCurrencyUsd"
-                  outlined
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12" sm="6">
-                <v-text-field
-                  v-model="editedItem.expiry"
-                  label="Expiry"
-                  :prepend-inner-icon="mdiCalendarAlert"
-                  outlined
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-slider
-                  v-model="editedItem.quantity"
-                  label="Quantity"
-                  max="100"
-                  min="0"
-                  thumb-label
-                  step="1"
-                ></v-slider>
-              </v-col>
-              <v-col cols="12">
-                <v-checkbox
-                  v-model="editedItem.availability"
-                  label="Available"
-                  color="primary"
-                  :on-icon="mdiCheckboxMarked"
-                  :off-icon="mdiCheckboxBlankOutline"
-                ></v-checkbox>
-              </v-col>
-            </v-row>
-          </v-card-text>
+      <v-row align="center" justify="center">
+        <v-btn
+          class="ml-2"
+          large
+          text
+          color="primary"
+          :disabled="loading"
+          :loading="loading"
+          @click.stop.prevent="beginLoading"
+          >Refresh <v-icon right>{{ mdiRefresh }}</v-icon></v-btn
+        >
+        <v-dialog v-model="dialog" max-width="500px">
+          <template v-slot:activator="{ on }"
+            ><v-btn
+              class="mr-2"
+              :disabled="loading"
+              large
+              text
+              color="primary"
+              v-on="on"
+              >Add Medicine
+              <v-icon right>{{ mdiPlusCircleOutline }}</v-icon></v-btn
+            >
+          </template>
+          <v-card>
+            <v-card-title>
+              <span class="headline">{{ formTitle }}</span>
+            </v-card-title>
+            <v-card-text class="pb-0">
+              <v-row dense>
+                <v-col cols="12">
+                  <v-text-field
+                    v-model="editedItem.name"
+                    label="Medicine Name"
+                    :prepend-inner-icon="mdiRenameBox"
+                    type="text"
+                    outlined
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" sm="6">
+                  <v-text-field
+                    v-model="editedItem.price"
+                    label="Price"
+                    type="number"
+                    :prepend-inner-icon="mdiCurrencyUsd"
+                    outlined
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" sm="6">
+                  <v-text-field
+                    v-model="editedItem.expiry"
+                    label="Expiry"
+                    :prepend-inner-icon="mdiCalendarAlert"
+                    outlined
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-slider
+                    v-model="editedItem.quantity"
+                    label="Quantity"
+                    max="100"
+                    min="0"
+                    thumb-label
+                    step="1"
+                  ></v-slider>
+                </v-col>
+                <v-col cols="12">
+                  <v-checkbox
+                    v-model="editedItem.availability"
+                    label="Available"
+                    color="primary"
+                    :on-icon="mdiCheckboxMarked"
+                    :off-icon="mdiCheckboxBlankOutline"
+                  ></v-checkbox>
+                </v-col>
+              </v-row>
+            </v-card-text>
 
-          <v-card-actions class="pa-5">
-            <div class="flex-grow-1"></div>
-            <v-btn color="red" text @click="close"
-              >Cancel <v-icon right>{{ mdiClose }}</v-icon></v-btn
-            >
-            <v-btn color="primary" text @click="save"
-              >Save <v-icon right>{{ mdiContentSave }}</v-icon></v-btn
-            >
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
+            <v-card-actions class="pa-5">
+              <div class="flex-grow-1"></div>
+              <v-btn color="red" text @click="close"
+                >Cancel <v-icon right>{{ mdiClose }}</v-icon></v-btn
+              >
+              <v-btn color="primary" text @click="save"
+                >Save <v-icon right>{{ mdiContentSave }}</v-icon></v-btn
+              >
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+      </v-row>
     </v-card-title>
     <v-data-table
       :headers="headers"
@@ -124,20 +127,23 @@
     >
       <template v-slot:item.expiry="{ item }">
         <v-progress-linear
-          v-if="item.expiry >= 75 && item.expiry <= 100"
+          v-if="getExpiry(item.startDate, item.expiry) >= 75"
           color="green lighten-1"
           height="10"
           rounded
           striped
-          :value="item.expiry"
+          :value="getExpiry(item.startDate, item.expiry)"
         ></v-progress-linear>
         <v-progress-linear
-          v-else-if="item.expiry <= 74 && item.expiry >= 35"
+          v-else-if="
+            getExpiry(item.startDate, item.expiry) <= 74 &&
+              getExpiry(item.startDate, item.expiry) >= 35
+          "
           color="orange darken-1"
           height="10"
           rounded
           striped
-          :value="item.expiry"
+          :value="getExpiry(item.startDate, item.expiry)"
         ></v-progress-linear>
         <v-progress-linear
           v-else
@@ -145,7 +151,7 @@
           height="10"
           rounded
           striped
-          :value="item.expiry"
+          :value="getExpiry(item.startDate, item.expiry)"
         ></v-progress-linear>
       </template>
       <template v-slot:item.price="{ item }">
@@ -280,35 +286,40 @@ export default {
         name: 'Panadol',
         quantity: 15,
         price: 40,
-        expiry: '88',
+        startDate: '2018-01-01T00:00:00+00:00',
+        expiry: '2020-01-01T00:00:00+00:00',
         availability: true
       },
       {
         name: 'Ibuprofen',
         quantity: 28,
         price: 60,
-        expiry: '95',
+        startDate: '2018-01-01T00:00:00+00:00',
+        expiry: '2020-01-01T00:00:00+00:00',
         availability: true
       },
       {
         name: 'Paracetamol',
         quantity: 43,
         price: 55,
-        expiry: '33',
+        startDate: '2019-01-01T00:00:00+00:00',
+        expiry: '2020-01-01T00:00:00+00:00',
         availability: true
       },
       {
         name: 'Panadol Extra',
         quantity: 89,
         price: 800,
-        expiry: '49',
+        startDate: '2019-09-01T00:00:00+00:00',
+        expiry: '2020-01-01T00:00:00+00:00',
         availability: false
       },
       {
         name: 'Panadol Lite',
         quantity: 99,
         price: 1200,
-        expiry: '12',
+        startDate: '2019-06-01T00:00:00+00:00',
+        expiry: '2020-01-01T00:00:00+00:00',
         availability: false
       }
     ]
@@ -353,6 +364,17 @@ export default {
         this.inventory.push(this.editedItem)
       }
       this.close()
+    },
+
+    getExpiry(startDate, expiryDate) {
+      const oneDay = 1000 * 60 * 60 * 24
+      const duration = Math.abs(
+        Math.round((new Date(expiryDate) - new Date(startDate)) / oneDay)
+      )
+      const now = Math.abs(
+        Math.round((new Date(startDate) - new Date()) / oneDay)
+      )
+      return Math.round((now / duration) * 100)
     }
   }
 }

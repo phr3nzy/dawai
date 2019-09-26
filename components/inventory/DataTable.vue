@@ -42,8 +42,7 @@
               text
               color="primary"
               v-on="on"
-              >Add Medicine
-              <v-icon right>{{ mdiPlusCircleOutline }}</v-icon></v-btn
+              >Add Item <v-icon right>{{ mdiPlusCircleOutline }}</v-icon></v-btn
             >
           </template>
           <v-card>
@@ -55,7 +54,7 @@
                 <v-col cols="12">
                   <v-text-field
                     v-model="editedItem.name"
-                    label="Medicine Name"
+                    label="Item Name"
                     :prepend-inner-icon="mdiRenameBox"
                     type="text"
                     outlined
@@ -79,6 +78,15 @@
                   ></v-text-field>
                 </v-col>
                 <v-col cols="12">
+                  <v-select
+                    v-model="editedItem.category"
+                    :items="inventoryCategories"
+                    label="Category"
+                    :prepend-inner-icon="mdiShapeOutline"
+                    outlined
+                  ></v-select>
+                </v-col>
+                <v-col cols="12">
                   <v-slider
                     v-model="editedItem.quantity"
                     label="Quantity"
@@ -88,10 +96,19 @@
                     step="1"
                   ></v-slider>
                 </v-col>
-                <v-col cols="12">
+                <v-col cols="6">
                   <v-checkbox
                     v-model="editedItem.availability"
                     label="Available"
+                    color="primary"
+                    :on-icon="mdiCheckboxMarked"
+                    :off-icon="mdiCheckboxBlankOutline"
+                  ></v-checkbox>
+                </v-col>
+                <v-col cols="6">
+                  <v-checkbox
+                    v-model="editedItem.perscription"
+                    label="Requires Perscription"
                     color="primary"
                     :on-icon="mdiCheckboxMarked"
                     :off-icon="mdiCheckboxBlankOutline"
@@ -120,30 +137,31 @@
       :search="search"
       :loading="loading"
       :loading-text="'Refreshing your inventory...'"
-      :items-per-page="10"
-      hide-default-footer
       multi-sort
       @page-count="pageCount = $event"
     >
+      <template v-slot:item.perscription="{ item }">
+        {{ item.perscription ? 'Required' : 'Not Required' }}
+      </template>
       <template v-slot:item.expiry="{ item }">
         <v-progress-linear
-          v-if="getExpiry(item.startDate, item.expiry) >= 75"
+          v-if="getExpiry(item.productionDate, item.expiry) >= 75"
           color="green lighten-1"
           height="10"
           rounded
           striped
-          :value="getExpiry(item.startDate, item.expiry)"
+          :value="getExpiry(item.productionDate, item.expiry)"
         ></v-progress-linear>
         <v-progress-linear
           v-else-if="
-            getExpiry(item.startDate, item.expiry) <= 74 &&
-              getExpiry(item.startDate, item.expiry) >= 35
+            getExpiry(item.productionDate, item.expiry) <= 74 &&
+              getExpiry(item.productionDate, item.expiry) >= 35
           "
           color="orange darken-1"
           height="10"
           rounded
           striped
-          :value="getExpiry(item.startDate, item.expiry)"
+          :value="getExpiry(item.productionDate, item.expiry)"
         ></v-progress-linear>
         <v-progress-linear
           v-else
@@ -151,7 +169,7 @@
           height="10"
           rounded
           striped
-          :value="getExpiry(item.startDate, item.expiry)"
+          :value="getExpiry(item.productionDate, item.expiry)"
         ></v-progress-linear>
       </template>
       <template v-slot:item.price="{ item }">
@@ -194,7 +212,7 @@
       </template>
 
       <template v-slot:no-results>
-        Oops! Medicine doesn't exist!
+        Oops! Item doesn't exist!
       </template>
     </v-data-table>
     <div class="text-center pt-2">
@@ -227,7 +245,8 @@ import {
   mdiContentSave,
   mdiCurrencyUsd,
   mdiCalendarAlert,
-  mdiRenameBox
+  mdiRenameBox,
+  mdiShapeOutline
 } from '@mdi/js'
 export default {
   data: () => ({
@@ -235,6 +254,8 @@ export default {
     editedIndex: -1,
     editedItem: {
       name: '',
+      category: '',
+      perscription: false,
       quantity: 0,
       price: 0,
       expiry: '',
@@ -242,6 +263,8 @@ export default {
     },
     defaultItem: {
       name: '',
+      category: '',
+      perscription: false,
       quantity: 0,
       price: 0,
       expiry: '',
@@ -263,17 +286,35 @@ export default {
     mdiCurrencyUsd,
     mdiCalendarAlert,
     mdiRenameBox,
+    mdiShapeOutline,
     page: 1,
     pageCount: 0,
-    itemsPerPage: 5,
     search: '',
     loading: false,
+    inventoryCategories: [
+      'Pill',
+      'Powder',
+      'Cream',
+      'Natural',
+      'Bandage',
+      'Paste',
+      'Injection',
+      'Inhalative',
+      'Drop',
+      'Suppository',
+      'Other'
+    ],
     headers: [
       {
         text: 'Name',
         align: 'left',
-        sortable: true,
         value: 'name'
+      },
+      { text: 'Category', align: 'center', value: 'category' },
+      {
+        text: 'Requires Perscription',
+        align: 'center',
+        value: 'perscription'
       },
       { text: 'Quantity', align: 'center', value: 'quantity' },
       { text: 'Price', align: 'center', value: 'price' },
@@ -284,41 +325,51 @@ export default {
     inventory: [
       {
         name: 'Panadol',
+        category: 'Pill',
+        perscription: false,
         quantity: 15,
         price: 40,
-        startDate: '2018-01-01T00:00:00+00:00',
+        productionDate: '2018-01-01T00:00:00+00:00',
         expiry: '2020-01-01T00:00:00+00:00',
         availability: true
       },
       {
         name: 'Ibuprofen',
+        category: 'Pill',
+        perscription: false,
         quantity: 28,
         price: 60,
-        startDate: '2018-01-01T00:00:00+00:00',
+        productionDate: '2018-01-01T00:00:00+00:00',
         expiry: '2020-01-01T00:00:00+00:00',
         availability: true
       },
       {
         name: 'Paracetamol',
+        category: 'Pill',
+        perscription: false,
         quantity: 43,
         price: 55,
-        startDate: '2019-01-01T00:00:00+00:00',
+        productionDate: '2019-01-01T00:00:00+00:00',
         expiry: '2020-01-01T00:00:00+00:00',
         availability: true
       },
       {
         name: 'Panadol Extra',
+        category: 'Pill',
+        perscription: false,
         quantity: 89,
         price: 800,
-        startDate: '2019-09-01T00:00:00+00:00',
+        productionDate: '2019-09-01T00:00:00+00:00',
         expiry: '2020-01-01T00:00:00+00:00',
         availability: false
       },
       {
         name: 'Panadol Lite',
+        category: 'Pill',
+        perscription: false,
         quantity: 99,
         price: 1200,
-        startDate: '2019-06-01T00:00:00+00:00',
+        productionDate: '2019-06-01T00:00:00+00:00',
         expiry: '2020-01-01T00:00:00+00:00',
         availability: false
       }
@@ -326,7 +377,7 @@ export default {
   }),
   computed: {
     formTitle() {
-      return this.editedIndex === -1 ? 'New Medicine Entry' : 'Edit Medicine'
+      return this.editedIndex === -1 ? 'New Item Entry' : 'Edit Item'
     }
   },
   methods: {
@@ -366,13 +417,13 @@ export default {
       this.close()
     },
 
-    getExpiry(startDate, expiryDate) {
+    getExpiry(productionDate, expiryDate) {
       const oneDay = 1000 * 60 * 60 * 24
       const duration = Math.abs(
-        Math.round((new Date(expiryDate) - new Date(startDate)) / oneDay)
+        Math.round((new Date(expiryDate) - new Date(productionDate)) / oneDay)
       )
       const now = Math.abs(
-        Math.round((new Date(startDate) - new Date()) / oneDay)
+        Math.round((new Date(productionDate) - new Date()) / oneDay)
       )
       return Math.round((now / duration) * 100)
     }

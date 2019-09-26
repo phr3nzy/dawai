@@ -23,7 +23,7 @@
       <v-divider />
 
       <v-list nav dense>
-        <v-list-item to="/">
+        <v-list-item to="/dashboard">
           <v-list-item-icon>
             <v-icon>{{ mdiHome }}</v-icon>
           </v-list-item-icon>

@@ -27,6 +27,12 @@
       <v-list nav dense>
         <v-list-item active-class="primary--text" to="/">
           <v-list-item-icon>
+            <v-icon>{{ mdiHome }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Home</v-list-item-title>
+        </v-list-item>
+        <v-list-item active-class="primary--text" to="/dashboard">
+          <v-list-item-icon>
             <v-icon>{{ mdiDesktopMacDashboard }}</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Dashboard</v-list-item-title>
@@ -68,6 +74,7 @@
 
 <script>
 import {
+  mdiHome,
   mdiAccountArrowRight,
   mdiDesktopMacDashboard,
   mdiPill,
@@ -77,6 +84,7 @@ import {
 export default {
   data() {
     return {
+      mdiHome,
       mdiAccountArrowRight,
       mdiDesktopMacDashboard,
       mdiPill,

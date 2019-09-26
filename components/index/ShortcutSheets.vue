@@ -4,7 +4,7 @@
       <v-sheet color="primary" dark>
         <v-row align="center" justify="center">
           <v-card color="transparent" flat>
-            <v-icon size="150">{{ mdiReceipt }}</v-icon>
+            <v-icon size="160">{{ mdiReceipt }}</v-icon>
             <v-card-actions class="text-center">
               <v-btn block class="black--text" color="white"
                 >Create Invoice</v-btn
@@ -18,7 +18,7 @@
       <v-sheet color="primary" dark>
         <v-row align="center" justify="center">
           <v-card color="transparent" flat>
-            <v-icon size="150">{{ mdiBottleTonicPlus }}</v-icon>
+            <v-icon size="160">{{ mdiBottleTonicPlus }}</v-icon>
             <v-card-actions class="text-center">
               <v-btn block class="black--text" color="white"
                 >Add Medicine</v-btn
@@ -32,7 +32,7 @@
       <v-sheet color="primary" dark>
         <v-row align="center" justify="center">
           <v-card color="transparent" flat>
-            <v-icon size="150">{{ mdiFileChartOutline }}</v-icon>
+            <v-icon size="160">{{ mdiFileChartOutline }}</v-icon>
             <v-card-actions class="text-center">
               <v-btn block class="black--text" color="white"
                 >Sales Report</v-btn

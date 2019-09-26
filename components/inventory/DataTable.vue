@@ -60,7 +60,7 @@
                     outlined
                   ></v-text-field>
                 </v-col>
-                <v-col cols="12" sm="6">
+                <v-col cols="12">
                   <v-text-field
                     v-model="editedItem.price"
                     label="Price"
@@ -70,18 +70,91 @@
                   ></v-text-field>
                 </v-col>
                 <v-col cols="12" sm="6">
-                  <v-text-field
-                    v-model="editedItem.expiry"
-                    label="Expiry"
-                    :prepend-inner-icon="mdiCalendarAlert"
-                    outlined
-                  ></v-text-field>
+                  <v-menu
+                    ref="menu1"
+                    v-model="menu1"
+                    :close-on-content-click="false"
+                    :return-value.sync="editedItem.productionDate"
+                    transition="scale-transition"
+                    offset-y
+                    min-width="290px"
+                  >
+                    <template v-slot:activator="{ on }">
+                      <v-text-field
+                        v-model="editedItem.productionDate"
+                        label="Production Date"
+                        :prepend-inner-icon="mdiCalendarClock"
+                        readonly
+                        outlined
+                        v-on="on"
+                      ></v-text-field>
+                    </template>
+                    <v-date-picker
+                      v-model="editedItem.productionDate"
+                      :next-icon="mdiChevronRight"
+                      :prev-icon="mdiChevronLeft"
+                      no-title
+                      scrollable
+                    >
+                      <div class="flex-grow-1"></div>
+                      <v-btn text color="primary" @click="menu1 = false"
+                        >Cancel</v-btn
+                      >
+                      <v-btn
+                        text
+                        color="primary"
+                        @click="$refs.menu1.save(editedItem.productionDate)"
+                        >OK</v-btn
+                      >
+                    </v-date-picker>
+                  </v-menu>
+                </v-col>
+                <v-col cols="12" sm="6">
+                  <v-menu
+                    ref="menu2"
+                    v-model="menu2"
+                    :close-on-content-click="false"
+                    :return-value.sync="editedItem.expiry"
+                    transition="scale-transition"
+                    offset-y
+                    min-width="290px"
+                  >
+                    <template v-slot:activator="{ on }">
+                      <v-text-field
+                        v-model="editedItem.expiry"
+                        label="Expiry Date"
+                        :prepend-inner-icon="mdiCalendarAlert"
+                        readonly
+                        outlined
+                        v-on="on"
+                      ></v-text-field>
+                    </template>
+                    <v-date-picker
+                      v-model="editedItem.expiry"
+                      :next-icon="mdiChevronRight"
+                      :prev-icon="mdiChevronLeft"
+                      no-title
+                      scrollable
+                    >
+                      <div class="flex-grow-1"></div>
+                      <v-btn text color="primary" @click="menu2 = false"
+                        >Cancel</v-btn
+                      >
+                      <v-btn
+                        text
+                        color="primary"
+                        @click="$refs.menu2.save(editedItem.expiry)"
+                        >OK</v-btn
+                      >
+                    </v-date-picker>
+                  </v-menu>
                 </v-col>
                 <v-col cols="12">
                   <v-select
                     v-model="editedItem.category"
                     :items="inventoryCategories"
                     label="Category"
+                    type="text"
                     :prepend-inner-icon="mdiShapeOutline"
                     outlined
                   ></v-select>
@@ -246,7 +319,8 @@ import {
   mdiCurrencyUsd,
   mdiCalendarAlert,
   mdiRenameBox,
-  mdiShapeOutline
+  mdiShapeOutline,
+  mdiCalendarClock
 } from '@mdi/js'
 export default {
   data: () => ({
@@ -258,6 +332,7 @@ export default {
       perscription: false,
       quantity: 0,
       price: 0,
+      productionDate: '',
       expiry: '',
       availability: false
     },
@@ -267,6 +342,7 @@ export default {
       perscription: false,
       quantity: 0,
       price: 0,
+      productionDate: '',
       expiry: '',
       availability: false
     },
@@ -287,6 +363,9 @@ export default {
     mdiCalendarAlert,
     mdiRenameBox,
     mdiShapeOutline,
+    mdiCalendarClock,
+    menu1: false,
+    menu2: false,
     page: 1,
     pageCount: 0,
     search: '',
@@ -329,8 +408,8 @@ export default {
         perscription: false,
         quantity: 15,
         price: 40,
-        productionDate: '2018-01-01T00:00:00+00:00',
-        expiry: '2020-01-01T00:00:00+00:00',
+        productionDate: '2018-01-01',
+        expiry: '2020-01-01',
         availability: true
       },
       {
@@ -339,8 +418,8 @@ export default {
         perscription: false,
         quantity: 28,
         price: 60,
-        productionDate: '2018-01-01T00:00:00+00:00',
-        expiry: '2020-01-01T00:00:00+00:00',
+        productionDate: '2018-01-01',
+        expiry: '2020-01-01',
         availability: true
       },
       {
@@ -349,8 +428,8 @@ export default {
         perscription: false,
         quantity: 43,
         price: 55,
-        productionDate: '2019-01-01T00:00:00+00:00',
-        expiry: '2020-01-01T00:00:00+00:00',
+        productionDate: '2019-01-01',
+        expiry: '2020-01-01',
         availability: true
       },
       {
@@ -359,8 +438,8 @@ export default {
         perscription: false,
         quantity: 89,
         price: 800,
-        productionDate: '2019-09-01T00:00:00+00:00',
-        expiry: '2020-01-01T00:00:00+00:00',
+        productionDate: '2019-09-01',
+        expiry: '2020-01-01',
         availability: false
       },
       {
@@ -369,8 +448,8 @@ export default {
         perscription: false,
         quantity: 99,
         price: 1200,
-        productionDate: '2019-06-01T00:00:00+00:00',
-        expiry: '2020-01-01T00:00:00+00:00',
+        productionDate: '2019-06-01',
+        expiry: '2020-01-01',
         availability: false
       }
     ]
@@ -425,7 +504,7 @@ export default {
       const now = Math.abs(
         Math.round((new Date(productionDate) - new Date()) / oneDay)
       )
-      return Math.round((now / duration) * 100)
+      return 100 - Math.round((now / duration) * 100)
     }
   }
 }

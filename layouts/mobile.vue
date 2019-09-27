@@ -37,11 +37,11 @@
           </v-list-item-icon>
           <v-list-item-title>Dashboard</v-list-item-title>
         </v-list-item>
-        <v-list-item active-class="primary--text" to="/inventory">
+        <v-list-item active-class="primary--text" to="/medicine">
           <v-list-item-icon>
             <v-icon>{{ mdiPill }}</v-icon>
           </v-list-item-icon>
-          <v-list-item-title>Inventory</v-list-item-title>
+          <v-list-item-title>Medicine</v-list-item-title>
         </v-list-item>
         <v-list-item active-class="primary--text" to="/finance">
           <v-list-item-icon>

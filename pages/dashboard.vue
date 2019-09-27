@@ -19,24 +19,6 @@
       <TimeChart />
     </v-col>
   </v-row>
-  <!-- <v-layout row wrap>
-    <v-flex xs12>
-      <MainSheet />
-      <DisplaySheets />
-      <v-card flat>
-        <LineChart />
-      </v-card>
-      <v-card flat>
-        <PieChart />
-      </v-card>
-      <v-card flat>
-        <HorizontalBarChart />
-      </v-card>
-      <v-card flat>
-        <TimeChart />
-      </v-card>
-    </v-flex>
-  </v-layout> -->
 </template>
 
 <script>
@@ -57,7 +39,15 @@ export default {
     DisplaySheets
   },
   head: () => ({
-    title: 'Dashboard'
+    title: 'Dashboard',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'View your performance and status with beautiful charts and easy to understand numbers'
+      }
+    ]
   })
 }
 </script>

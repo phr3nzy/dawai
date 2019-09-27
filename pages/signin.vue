@@ -72,7 +72,14 @@ export default {
   layout: () => 'none',
   // middleware: 'no-auth',
   head: () => ({
-    title: 'Sign In'
+    title: 'Sign In',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Sign In to your Dawai account and manage your Pharmacy easily'
+      }
+    ]
   }),
   data: () => ({
     mdiEmail,

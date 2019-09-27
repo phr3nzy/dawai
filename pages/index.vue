@@ -17,7 +17,15 @@ export default {
   },
   layout: ({ isMobile }) => (isMobile ? 'mobile' : 'default'),
   head: () => ({
-    title: 'Home'
+    title: 'Home',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Your Pharmacy quick actions page. Create invoices, check reports and add items quickly!'
+      }
+    ]
   })
 }
 </script>

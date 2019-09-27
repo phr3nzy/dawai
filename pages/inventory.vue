@@ -14,7 +14,15 @@ export default {
     DataTable
   },
   head: () => ({
-    title: 'Inventory'
+    title: 'Inventory',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Display all items in your inventory including Medicine, Surgical Supplies, Ointments, Beauty Products and more'
+      }
+    ]
   })
 }
 </script>

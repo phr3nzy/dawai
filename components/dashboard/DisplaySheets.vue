@@ -1,6 +1,6 @@
 <template>
-  <v-layout row wrap>
-    <v-flex xs12 sm4>
+  <v-row align="center" justify="center" dense>
+    <v-col cols="12" sm="12" md="6" lg="4" xl="4">
       <v-sheet
         min-height="265"
         max-height="335"
@@ -23,8 +23,8 @@
           <span class="headline text-center">Yearly Income Goal</span>
         </v-row>
       </v-sheet>
-    </v-flex>
-    <v-flex xs12 sm4>
+    </v-col>
+    <v-col cols="12" sm="12" md="6" lg="4" xl="4">
       <v-sheet
         min-height="265"
         max-height="335"
@@ -41,8 +41,8 @@
           <span class="text-center">Avg. Monthly Income</span>
         </v-row>
       </v-sheet>
-    </v-flex>
-    <v-flex xs12 sm4>
+    </v-col>
+    <v-col cols="12" sm="12" md="6" lg="4" xl="4">
       <v-sheet
         min-height="265"
         max-height="335"
@@ -65,8 +65,8 @@
           <span class="headline text-center">Monthly Income Goal</span>
         </v-row>
       </v-sheet>
-    </v-flex>
-  </v-layout>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer expand-on-hover permanent width="275px" app>
+    <v-navigation-drawer expand-on-hover permanent app>
       <template v-slot:prepend>
         <v-list nav dense>
           <v-list-item active-class="primary--text" to="/profile" two-line>

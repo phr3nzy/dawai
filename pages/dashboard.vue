@@ -1,32 +1,42 @@
 <template>
-  <v-layout row wrap>
+  <v-row align="center" justify="center" dense>
+    <v-col cols="12" sm="12" md="12" lg="12" xl="12">
+      <MainSheet />
+    </v-col>
+    <v-col cols="12" sm="12" md="12" lg="12" xl="12">
+      <DisplaySheets />
+    </v-col>
+    <v-col cols="12" sm="6" md="4" lg="4" xl="4">
+      <LineChart />
+    </v-col>
+    <v-col cols="12" sm="6" md="4" lg="4" xl="4">
+      <PieChart />
+    </v-col>
+    <v-col cols="12" sm="6" md="4" lg="4" xl="4">
+      <HorizontalBarChart />
+    </v-col>
+    <v-col cols="12" sm="12" md="12" lg="12" xl="12">
+      <TimeChart />
+    </v-col>
+  </v-row>
+  <!-- <v-layout row wrap>
     <v-flex xs12>
       <MainSheet />
-    </v-flex>
-    <v-flex xs12>
       <DisplaySheets />
-    </v-flex>
-    <v-flex xs12 sm6 md4>
       <v-card flat>
         <LineChart />
       </v-card>
-    </v-flex>
-    <v-flex xs12 sm6 md4>
       <v-card flat>
         <PieChart />
       </v-card>
-    </v-flex>
-    <v-flex xs12 sm6 md4>
       <v-card flat>
         <HorizontalBarChart />
       </v-card>
-    </v-flex>
-    <v-flex class="my-5" xs12>
       <v-card flat>
         <TimeChart />
       </v-card>
     </v-flex>
-  </v-layout>
+  </v-layout> -->
 </template>
 
 <script>

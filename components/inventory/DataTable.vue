@@ -174,8 +174,8 @@
                     v-model="editedItem.availability"
                     label="Available"
                     color="primary"
-                    :on-icon="mdiCheckboxMarked"
-                    :off-icon="mdiCheckboxBlankOutline"
+                    :on-icon="mdiCheckboxMarkedCircleOutline"
+                    :off-icon="mdiCheckboxBlankCircleOutline"
                   ></v-checkbox>
                 </v-col>
                 <v-col cols="6">
@@ -183,8 +183,8 @@
                     v-model="editedItem.perscription"
                     label="Requires Perscription"
                     color="primary"
-                    :on-icon="mdiCheckboxMarked"
-                    :off-icon="mdiCheckboxBlankOutline"
+                    :on-icon="mdiCheckboxMarkedCircleOutline"
+                    :off-icon="mdiCheckboxBlankCircleOutline"
                   ></v-checkbox>
                 </v-col>
               </v-row>
@@ -339,8 +339,8 @@ import {
   mdiClose,
   mdiCheckCircleOutline,
   mdiCloseCircleOutline,
-  mdiCheckboxMarked,
-  mdiCheckboxBlankOutline,
+  mdiCheckboxMarkedCircleOutline,
+  mdiCheckboxBlankCircleOutline,
   mdiContentSave,
   mdiCurrencyUsd,
   mdiCalendarAlert,
@@ -383,8 +383,8 @@ export default {
     mdiClose,
     mdiCheckCircleOutline,
     mdiCloseCircleOutline,
-    mdiCheckboxMarked,
-    mdiCheckboxBlankOutline,
+    mdiCheckboxMarkedCircleOutline,
+    mdiCheckboxBlankCircleOutline,
     mdiContentSave,
     mdiCurrencyUsd,
     mdiCalendarAlert,

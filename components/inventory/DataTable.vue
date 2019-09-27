@@ -222,7 +222,7 @@
             <span>Required!</span>
           </v-tooltip>
         </v-chip>
-        <v-chip v-else dark color="success">
+        <v-chip v-else dark color="rgb(128,128,128)">
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
               <v-icon v-on="on">{{ mdiCloseCircleOutline }}</v-icon>

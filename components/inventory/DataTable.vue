@@ -214,7 +214,22 @@
       @page-count="pageCount = $event"
     >
       <template v-slot:item.perscription="{ item }">
-        {{ item.perscription ? 'Required' : 'Not Required' }}
+        <v-chip v-if="item.perscription" color="warning" dark>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on }">
+              <v-icon v-on="on">{{ mdiAlertCircle }}</v-icon>
+            </template>
+            <span>Required!</span>
+          </v-tooltip>
+        </v-chip>
+        <v-chip v-else dark color="success">
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on }">
+              <v-icon v-on="on">{{ mdiCloseCircleOutline }}</v-icon>
+            </template>
+            <span>Not Required</span>
+          </v-tooltip></v-chip
+        >
       </template>
       <template v-slot:item.expiry="{ item }">
         <v-progress-linear
@@ -246,14 +261,27 @@
         ></v-progress-linear>
       </template>
       <template v-slot:item.price="{ item }">
-        <span>{{ item.price }} <sup>SDG</sup></span>
+        <span
+          >{{ item.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') }}
+          <sup>SDG</sup></span
+        >
       </template>
       <template v-slot:item.availability="{ item }">
         <v-chip v-if="item.availability" color="success">
-          <v-icon>{{ mdiCheckCircleOutline }}</v-icon>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on }">
+              <v-icon v-on="on">{{ mdiCheckCircleOutline }}</v-icon>
+            </template>
+            <span>Available</span>
+          </v-tooltip>
         </v-chip>
-        <v-chip v-else class="white--text" color="danger"
-          ><v-icon>{{ mdiCloseCircleOutline }}</v-icon></v-chip
+        <v-chip v-else class="white--text" color="danger">
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on }">
+              <v-icon v-on="on">{{ mdiCloseCircleOutline }}</v-icon>
+            </template>
+            <span>Unavailable</span>
+          </v-tooltip></v-chip
         >
       </template>
       <template v-slot:item.action="{ item }">
@@ -320,7 +348,8 @@ import {
   mdiCalendarAlert,
   mdiRenameBox,
   mdiShapeOutline,
-  mdiCalendarClock
+  mdiCalendarClock,
+  mdiAlertCircle
 } from '@mdi/js'
 export default {
   data: () => ({
@@ -364,6 +393,7 @@ export default {
     mdiRenameBox,
     mdiShapeOutline,
     mdiCalendarClock,
+    mdiAlertCircle,
     menu1: false,
     menu2: false,
     page: 1,
@@ -375,7 +405,6 @@ export default {
       'Powder',
       'Cream',
       'Natural',
-      'Bandage',
       'Paste',
       'Injection',
       'Inhalative',
@@ -435,7 +464,7 @@ export default {
       {
         name: 'Panadol Extra',
         category: 'Pill',
-        perscription: false,
+        perscription: true,
         quantity: 89,
         price: 800,
         productionDate: '2019-09-01',
@@ -445,7 +474,7 @@ export default {
       {
         name: 'Panadol Lite',
         category: 'Pill',
-        perscription: false,
+        perscription: true,
         quantity: 99,
         price: 1200,
         productionDate: '2019-06-01',

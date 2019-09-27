@@ -211,6 +211,7 @@
       :loading="loading"
       :loading-text="'Refreshing your inventory...'"
       multi-sort
+      hide-default-footer
       @page-count="pageCount = $event"
     >
       <template v-slot:item.perscription="{ item }">
@@ -261,10 +262,7 @@
         ></v-progress-linear>
       </template>
       <template v-slot:item.price="{ item }">
-        <span
-          >{{ item.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') }}
-          <sup>SDG</sup></span
-        >
+        <span>{{ item.price }} <sup>SDG</sup></span>
       </template>
       <template v-slot:item.availability="{ item }">
         <v-chip v-if="item.availability" color="success">

@@ -8,23 +8,22 @@
       elevation="6"
       dark
     >
-      <span class="display-2 font-weight-thin">Inventory</span>
+      <span class="display-2 font-weight-thin">Medicine</span>
     </v-sheet>
-    <v-card-title class="mx-5">
-      <v-text-field
-        v-model="search"
-        label="Search Medcine"
-        type="text"
-        :clear-icon="mdiClose"
-        clearable
-        :prepend-inner-icon="mdiMagnify"
-        outlined
-      ></v-text-field>
-      <v-spacer></v-spacer>
+    <v-card-title>
+      <v-row class="mx-5" align="center" justify="center">
+        <v-text-field
+          v-model="search"
+          label="Search Medcine"
+          type="text"
+          :clear-icon="mdiClose"
+          clearable
+          :prepend-inner-icon="mdiMagnify"
+          outlined
+        ></v-text-field>
+        <v-spacer></v-spacer>
 
-      <v-row align="center" justify="center">
         <v-btn
-          class="ml-2"
           large
           text
           color="primary"
@@ -35,13 +34,7 @@
         >
         <v-dialog v-model="dialog" max-width="500px">
           <template v-slot:activator="{ on }"
-            ><v-btn
-              class="mr-2"
-              :disabled="loading"
-              large
-              text
-              color="primary"
-              v-on="on"
+            ><v-btn :disabled="loading" large text color="primary" v-on="on"
               >Add Item <v-icon right>{{ mdiPlusCircleOutline }}</v-icon></v-btn
             >
           </template>

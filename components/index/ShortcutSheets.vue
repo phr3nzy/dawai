@@ -6,7 +6,7 @@
           <v-card color="transparent" flat>
             <v-icon size="160">{{ mdiReceipt }}</v-icon>
             <v-card-actions class="text-center">
-              <v-btn block class="black--text" color="white"
+              <v-btn to="/finance" block class="black--text" color="white"
                 >Create Invoice</v-btn
               >
             </v-card-actions>
@@ -20,7 +20,7 @@
           <v-card color="transparent" flat>
             <v-icon size="160">{{ mdiBottleTonicPlus }}</v-icon>
             <v-card-actions class="text-center">
-              <v-btn block class="black--text" color="white"
+              <v-btn to="/medicine" block class="black--text" color="white"
                 >Add Medicine</v-btn
               >
             </v-card-actions>
@@ -34,7 +34,7 @@
           <v-card color="transparent" flat>
             <v-icon size="160">{{ mdiFileChartOutline }}</v-icon>
             <v-card-actions class="text-center">
-              <v-btn block class="black--text" color="white"
+              <v-btn to="/dashboard" block class="black--text" color="white"
                 >Sales Report</v-btn
               >
             </v-card-actions>

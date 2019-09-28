@@ -18,6 +18,7 @@
           type="text"
           :clear-icon="mdiClose"
           clearable
+          :disabled="loading"
           :prepend-inner-icon="mdiMagnify"
           outlined
         ></v-text-field>

@@ -15,7 +15,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Find any medicine you need by location. Manage your pharmacys inventory, sales and finances with a beautiful dashboard'
+          'Keep tabs on medicine on inventory, track your performance, manage expenses and finances, create invoices and more!'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -50,9 +50,9 @@ export default {
       'nuxt-social-meta',
       {
         url: 'https://dawai-ph.herokuapp.com',
-        title: 'Dawai - Medicine Locator and Pharmacy Management',
+        title: 'Dawai - Your Complete Pharmacy Management System',
         description:
-          'Find any medicine you need by location. Manage your pharmacys inventory, sales and finances with a beautiful dashboard.',
+          'Keep tabs on medicine on inventory, track your performance, manage expenses and finances, create invoices and more!',
         locale: 'en-US',
         twitter: '@_phr3nzy',
         img: '/logo-text-whitebg.png',
@@ -69,7 +69,7 @@ export default {
    ** Manifest setup
    */
   manifest: {
-    name: 'Dawai - Medicine Locator and Pharmacy Management',
+    name: 'Dawai - Your Complete Pharmacy Management System',
     short_name: 'Dawai',
     lang: 'en',
     display: 'standalone',

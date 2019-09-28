@@ -209,22 +209,22 @@
       @page-count="pageCount = $event"
     >
       <template v-slot:item.perscription="{ item }">
-        <v-chip v-if="item.perscription" color="warning" dark>
-          <v-tooltip bottom>
-            <template v-slot:activator="{ on }">
-              <v-icon v-on="on">{{ mdiAlertCircle }}</v-icon>
-            </template>
-            <span>Required!</span>
-          </v-tooltip>
-        </v-chip>
-        <v-chip v-else dark color="rgb(128,128,128)">
-          <v-tooltip bottom>
-            <template v-slot:activator="{ on }">
-              <v-icon v-on="on">{{ mdiCloseCircleOutline }}</v-icon>
-            </template>
-            <span>Not Required</span>
-          </v-tooltip></v-chip
-        >
+        <v-tooltip v-if="item.perscription" bottom>
+          <template v-slot:activator="{ on }">
+            <v-chip color="warning" dark v-on="on">
+              <v-icon>{{ mdiAlertCircle }}</v-icon>
+            </v-chip>
+          </template>
+          <span>Required!</span>
+        </v-tooltip>
+        <v-tooltip v-else bottom>
+          <template v-slot:activator="{ on }">
+            <v-chip dark color="rgb(128,128,128)" v-on="on">
+              <v-icon>{{ mdiCloseCircleOutline }}</v-icon>
+            </v-chip>
+          </template>
+          <span>Not Required</span>
+        </v-tooltip>
       </template>
       <template v-slot:item.expiry="{ item }">
         <v-progress-linear
@@ -259,22 +259,22 @@
         <span>{{ item.price }} <sup>SDG</sup></span>
       </template>
       <template v-slot:item.availability="{ item }">
-        <v-chip v-if="item.availability" color="success">
-          <v-tooltip bottom>
-            <template v-slot:activator="{ on }">
-              <v-icon v-on="on">{{ mdiCheckCircleOutline }}</v-icon>
-            </template>
-            <span>Available</span>
-          </v-tooltip>
-        </v-chip>
-        <v-chip v-else class="white--text" color="danger">
-          <v-tooltip bottom>
-            <template v-slot:activator="{ on }">
-              <v-icon v-on="on">{{ mdiCloseCircleOutline }}</v-icon>
-            </template>
-            <span>Unavailable</span>
-          </v-tooltip></v-chip
-        >
+        <v-tooltip v-if="item.availability" bottom>
+          <template v-slot:activator="{ on }">
+            <v-chip color="success" dark v-on="on">
+              <v-icon>{{ mdiCheckCircleOutline }}</v-icon>
+            </v-chip>
+          </template>
+          <span>Available</span>
+        </v-tooltip>
+        <v-tooltip v-else bottom>
+          <template v-slot:activator="{ on }">
+            <v-chip color="danger" dark v-on="on">
+              <v-icon>{{ mdiCloseCircleOutline }}</v-icon>
+            </v-chip>
+          </template>
+          <span>Unavailable</span>
+        </v-tooltip>
       </template>
       <template v-slot:item.action="{ item }">
         <v-btn

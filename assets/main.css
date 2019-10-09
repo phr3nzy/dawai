@@ -32,3 +32,46 @@ body {
   box-shadow: inset -5px 5px 10px hsla(0, 0%, 20%, 0.5),
 		inset 5px -5px 10px hsla(0, 0%, 20%, 0.5)!important;
 }
+
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  box-shadow: none;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background: transparent;
+  box-shadow: inset 1px 1px 5px rgb(128, 128, 128);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #2196F3;
+  background: -moz-linear-gradient(to top, rgba(58, 0, 95, 0.7),  rgba(39, 24, 126, 0.7),  rgba(20, 81, 143, 0.7),  rgba(37, 113, 191, 0.7));
+  background: -webkit-linear-gradient(to top, rgba(58, 0, 95, 0.7),  rgba(39, 24, 126, 0.7),  rgba(20, 81, 143, 0.7),  rgba(37, 113, 191, 0.7));
+  background: -o-linear-gradient(to top, rgba(58, 0, 95, 0.7),  rgba(39, 24, 126, 0.7),  rgba(20, 81, 143, 0.7),  rgba(37, 113, 191, 0.7));
+  background: -ms-linear-gradient(to top, rgba(58, 0, 95, 0.7),  rgba(39, 24, 126, 0.7),  rgba(20, 81, 143, 0.7),  rgba(37, 113, 191, 0.7));
+  background: linear-gradient(to top, rgba(58, 0, 95, 0.7),  rgba(39, 24, 126, 0.7),  rgba(20, 81, 143, 0.7),  rgba(37, 113, 191, 0.7));
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #2196F3;
+  background: -moz-linear-gradient(to top, rgba(58, 0, 95, 0.8),  rgba(39, 24, 126, 0.8),  rgba(20, 81, 143, 0.8),  rgba(37, 113, 191, 0.8));
+  background: -webkit-linear-gradient(to top, rgba(58, 0, 95, 0.8),  rgba(39, 24, 126, 0.8),  rgba(20, 81, 143, 0.8),  rgba(37, 113, 191, 0.8));
+  background: -o-linear-gradient(to top, rgba(58, 0, 95, 0.8),  rgba(39, 24, 126, 0.8),  rgba(20, 81, 143, 0.8),  rgba(37, 113, 191, 0.8));
+  background: -ms-linear-gradient(to top, rgba(58, 0, 95, 0.8),  rgba(39, 24, 126, 0.8),  rgba(20, 81, 143, 0.8),  rgba(37, 113, 191, 0.8));
+  background: linear-gradient(to top, rgba(58, 0, 95, 0.8),  rgba(39, 24, 126, 0.8),  rgba(20, 81, 143, 0.8),  rgba(37, 113, 191, 0.8));
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: #2196F3;
+  background: -moz-linear-gradient(to top, rgba(58, 0, 95, 1),  rgba(39, 24, 126, 1),  rgba(20, 81, 143, 1),  rgba(37, 113, 191, 1));
+  background: -webkit-linear-gradient(to top, rgba(58, 0, 95, 1),  rgba(39, 24, 126, 1),  rgba(20, 81, 143, 1),  rgba(37, 113, 191, 1));
+  background: -o-linear-gradient(to top, rgba(58, 0, 95, 1),  rgba(39, 24, 126, 1),  rgba(20, 81, 143, 1),  rgba(37, 113, 191, 1));
+  background: -ms-linear-gradient(to top, rgba(58, 0, 95, 1),  rgba(39, 24, 126, 1),  rgba(20, 81, 143, 1),  rgba(37, 113, 191, 1));
+  background: linear-gradient(to top, rgba(58, 0, 95, 1),  rgba(39, 24, 126, 1),  rgba(20, 81, 143, 1),  rgba(37, 113, 191, 1));
+}

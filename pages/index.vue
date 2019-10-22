@@ -1,16 +1,23 @@
 <template>
   <v-container>
-    <v-layout row>
-      <WelcomeSheet />
-    </v-layout>
+    <v-row>
+      <v-col cols="12" xs="12">
+        <WelcomeSheet />
+      </v-col>
+      <v-col cols="12" xs="12">
+        <Search />
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script>
 import WelcomeSheet from '@/components/index/WelcomeSheet'
+import Search from '@/components/index/Search'
 export default {
   components: {
-    WelcomeSheet
+    WelcomeSheet,
+    Search
   },
   layout: ({ isMobile }) => (isMobile ? 'mobile' : 'default'),
   head: () => ({

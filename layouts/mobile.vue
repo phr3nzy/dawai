@@ -64,7 +64,7 @@
         </v-list>
       </template>
     </v-navigation-drawer>
-    <v-app-bar app>
+    <v-app-bar elevate-on-scroll app>
       <v-btn color="black" icon @click.stop.prevent="drawer = !drawer">
         <v-icon>{{ mdiMenu }}</v-icon>
       </v-btn>

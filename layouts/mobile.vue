@@ -68,7 +68,7 @@
       <v-btn color="black" icon @click.stop.prevent="drawer = !drawer">
         <v-icon>{{ mdiMenu }}</v-icon>
       </v-btn>
-      <v-toolbar-title>x249 ERP</v-toolbar-title>
+      <v-toolbar-title>Dawai</v-toolbar-title>
     </v-app-bar>
     <v-content>
       <v-container>

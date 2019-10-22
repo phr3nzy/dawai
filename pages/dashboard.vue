@@ -1,7 +1,10 @@
 <template>
   <v-row align="center" justify="center" dense>
     <v-col cols="12" sm="12" md="12" lg="12" xl="12">
-      <MainSheet />
+      <main-sheet />
+    </v-col>
+    <v-col cols="12" sm="12" md="12" lg="12" xl="12">
+      <ShortcutSheets />
     </v-col>
     <v-col cols="12" sm="12" md="12" lg="12" xl="12">
       <DisplaySheets />
@@ -22,6 +25,7 @@
 </template>
 
 <script>
+import ShortcutSheets from '@/components/index/ShortcutSheets'
 import MainSheet from '@/components/dashboard/MainSheet'
 import LineChart from '@/components/dashboard/charts/LineChart'
 import PieChart from '@/components/dashboard/charts/PieChart'
@@ -31,6 +35,7 @@ import DisplaySheets from '@/components/dashboard/DisplaySheets'
 export default {
   layout: ({ isMobile }) => (isMobile ? 'mobile' : 'default'),
   components: {
+    ShortcutSheets,
     MainSheet,
     LineChart,
     PieChart,

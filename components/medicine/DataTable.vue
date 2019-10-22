@@ -1,7 +1,7 @@
 <template>
-  <v-card class="mt-10 pb-5" outlined flat>
+  <v-card class="mt-10 pb-5 slight-br" outlined flat>
     <v-sheet
-      class="v-sheet--offset mx-auto px-4 py-8"
+      class="v-sheet--offset mx-auto px-4 py-8 slight-br"
       color="primary"
       min-height="100px"
       max-width="calc(100% - 64px)"

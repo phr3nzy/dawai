@@ -23,7 +23,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Your Pharmacy quick actions page. Create invoices, check reports and add items quickly!'
+          'Search for any medicine you need using Dawai! We connect you with all the pharmacies we can to help you find whatever medicine you need efficiently.'
       }
     ]
   })

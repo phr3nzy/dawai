@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import ShortcutSheets from '@/components/index/ShortcutSheets'
+import ShortcutSheets from '@/components/dashboard/ShortcutSheets'
 import MainSheet from '@/components/dashboard/MainSheet'
 import LineChart from '@/components/dashboard/charts/LineChart'
 import PieChart from '@/components/dashboard/charts/PieChart'

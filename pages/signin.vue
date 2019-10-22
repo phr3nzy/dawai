@@ -32,7 +32,7 @@
               Forgot password?
             </nuxt-link>
           </v-card-text>
-          <v-card-actions class="px-5">
+          <v-card-actions class="px-lg-5 px-md-5 px-sm-3">
             <v-checkbox
               v-model="check"
               color="primary"

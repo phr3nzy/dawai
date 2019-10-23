@@ -4,7 +4,7 @@ Dawai is a project with an ambition of providing aid to the Sudanese populous in
 
 To even contribute more to the Sudanese populous, Dawai is completely Open Source and commits 100% transparency on all levels. Even our backend is, check it out [here](https://www.github.com/phr3nzy/dawai-backend).
 
-This repository contains the Frontend of Dawai (not the landnig page, it's [here](https://www.github.com/phr3nzy/dawai-landing)). Built using Vue, Vuetify & Nuxt!
+This repository contains the Frontend of Dawai (not the landing page, it's [here](https://www.github.com/phr3nzy/dawai-landing)). Built using Vue, Vuetify & Nuxt!
 
 ## How to contribute to Dawai?
 

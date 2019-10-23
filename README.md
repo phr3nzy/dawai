@@ -16,6 +16,19 @@ Fire up a fork and do any and all contributions you'd like, even the smallest th
 
 That's all! Good fortune.
 
+## Dawai Hosting Costs
+
+To be able to host Dawai efficiently, we opted to use Heroku. They provide a PaaS (Platform-as-a-Service) that gives us many features and addons that saves us time.
+
+|          | Plan Name             | Plan Quantity | Plan Price |
+|----------|-----------------------|---------------|------------|
+| Frontend | `STANDARD 1X`         |       1       |    $25/m   |
+| Backend  | `STANDARD 2X`         |       2       |    $50/m   |
+| Database | `POSTGRES STANDARD 2` |       1       |   $200/m   |
+| Total    | --------------------- | ------------- |   $325/m   |
+
+If you feel this is overkill, send us a suggestion on a better PaaS. We appreciate all the adivce we can get!
+
 ## Build Setup
 
 ``` bash

@@ -25,7 +25,7 @@ To be able to host Dawai efficiently, we opted to use Heroku. They provide a Paa
 | Frontend | `STANDARD 1X`         |       1       |    $25/m   |
 | Backend  | `STANDARD 2X`         |       2       |    $50/m   |
 | Database | `POSTGRES STANDARD 2` |       1       |   $200/m   |
-| Total    | --------------------- | ------------- |   $325/m   |
+| Total    |                       |               |   $325/m   |
 
 If you feel this is overkill, send us a suggestion on a better PaaS. We appreciate all the adivce we can get!
 

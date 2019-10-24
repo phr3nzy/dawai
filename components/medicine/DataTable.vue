@@ -157,6 +157,7 @@
                     :items="inventoryCategories"
                     label="Category"
                     type="text"
+                    :append-icon="mdiChevronDown"
                     :prepend-inner-icon="mdiShapeOutline"
                     outlined
                   ></v-select>
@@ -336,6 +337,7 @@ import {
   mdiPencil,
   mdiDeleteForever,
   mdiPlusCircleOutline,
+  mdiChevronDown,
   mdiRefresh,
   mdiMagnify,
   mdiClose,
@@ -380,6 +382,7 @@ export default {
     mdiPencil,
     mdiDeleteForever,
     mdiPlusCircleOutline,
+    mdiChevronDown,
     mdiRefresh,
     mdiMagnify,
     mdiClose,

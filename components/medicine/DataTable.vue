@@ -212,16 +212,16 @@
       <template v-slot:item.perscription="{ item }">
         <v-tooltip v-if="item.perscription" bottom>
           <template v-slot:activator="{ on }">
-            <v-chip color="warning" dark v-on="on">
-              <v-icon>{{ mdiAlertCircle }}</v-icon>
+            <v-chip color="transparent" dark v-on="on">
+              <v-icon color="warning">{{ mdiAlertCircle }}</v-icon>
             </v-chip>
           </template>
-          <span>Required!</span>
+          <span>Required</span>
         </v-tooltip>
         <v-tooltip v-else bottom>
           <template v-slot:activator="{ on }">
-            <v-chip dark color="rgb(128,128,128)" v-on="on">
-              <v-icon>{{ mdiCloseCircleOutline }}</v-icon>
+            <v-chip color="transparent" dark v-on="on">
+              <v-icon color="rgb(128,128,128)">{{ mdiCloseCircle }}</v-icon>
             </v-chip>
           </template>
           <span>Not Required</span>
@@ -262,16 +262,16 @@
       <template v-slot:item.availability="{ item }">
         <v-tooltip v-if="item.availability" bottom>
           <template v-slot:activator="{ on }">
-            <v-chip color="success" dark v-on="on">
-              <v-icon>{{ mdiCheckCircleOutline }}</v-icon>
+            <v-chip color="transparent" dark v-on="on">
+              <v-icon color="success">{{ mdiCheckCircle }}</v-icon>
             </v-chip>
           </template>
           <span>Available</span>
         </v-tooltip>
         <v-tooltip v-else bottom>
           <template v-slot:activator="{ on }">
-            <v-chip color="danger" dark v-on="on">
-              <v-icon>{{ mdiCloseCircleOutline }}</v-icon>
+            <v-chip color="transparent" dark v-on="on">
+              <v-icon color="danger">{{ mdiCloseCircle }}</v-icon>
             </v-chip>
           </template>
           <span>Unavailable</span>
@@ -332,8 +332,8 @@ import {
   mdiRefresh,
   mdiMagnify,
   mdiClose,
-  mdiCheckCircleOutline,
-  mdiCloseCircleOutline,
+  mdiCheckCircle,
+  mdiCloseCircle,
   mdiCheckboxMarkedCircleOutline,
   mdiCheckboxBlankCircleOutline,
   mdiContentSave,
@@ -376,8 +376,8 @@ export default {
     mdiRefresh,
     mdiMagnify,
     mdiClose,
-    mdiCheckCircleOutline,
-    mdiCloseCircleOutline,
+    mdiCheckCircle,
+    mdiCloseCircle,
     mdiCheckboxMarkedCircleOutline,
     mdiCheckboxBlankCircleOutline,
     mdiContentSave,

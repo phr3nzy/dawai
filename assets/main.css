@@ -43,19 +43,8 @@
   box-shadow: none;
 }
 
-*::-webkit-scrollbar-track:hover {
-  background: transparent;
-  box-shadow: inset 1px 1px 5px rgb(209, 209, 209);
-}
 
 *::-webkit-scrollbar-thumb {
   background: rgb(184, 184, 184);
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background: rgb(170, 170, 170);
-}
-
-*::-webkit-scrollbar-thumb:active {
-  background: rgb(150, 150, 150);
+  border-radius: 15px;
 }

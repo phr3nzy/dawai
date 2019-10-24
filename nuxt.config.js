@@ -23,7 +23,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#64D977', height: '3px' },
+  loading: { color: '#19E51C', height: '3px' },
   /*
    ** Global CSS
    */
@@ -136,7 +136,7 @@ export default {
         light: {
           primary: '#3A005F',
           accent: '#2571BF',
-          secondary: '#64D977',
+          secondary: '#19E51C',
           info: colors.teal.lighten1,
           danger: colors.red.darken1,
           warning: colors.amber.base,

@@ -9,7 +9,7 @@ export default {
       datasets: [
         {
           label: 'Wholesale',
-          backgroundColor: 'rgba(108, 216, 126, 1)',
+          backgroundColor: 'rgb(25, 229, 28)',
           data: [454, 420, 558, 326, 285, 522]
         },
         {

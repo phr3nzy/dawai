@@ -9,7 +9,7 @@ export default {
       datasets: [
         {
           label: 'Profit',
-          borderColor: 'rgb(108, 216, 126)',
+          borderColor: 'rgb(25, 229, 28)',
           fill: false,
           data: [454, 420, 558, 326, 285, 522]
         },

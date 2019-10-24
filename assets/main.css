@@ -19,6 +19,10 @@
   border-radius: 30px!important;
 }
 
+.heavy-br {
+  border-radius: 60px!important;
+}
+
 .main-gradient {
   background: linear-gradient(to bottom, #3A005F,  rgb(39, 24, 126),  rgb(20, 81, 143),  #2571BF)!important;
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <v-sheet
-      class="my-10 mx-5 pa-5 slight-br"
+      class="text-center my-10 pa-5 heavy-br"
       color="primary"
       width="100%"
       elevation="6"

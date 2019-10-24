@@ -31,12 +31,19 @@
           color="primary"
           :disabled="loading"
           :loading="loading"
+          rounded
           @click.stop.prevent="beginLoading"
           >Refresh <v-icon right>{{ mdiRefresh }}</v-icon></v-btn
         >
         <v-dialog v-model="dialog" max-width="500px">
           <template v-slot:activator="{ on }"
-            ><v-btn :disabled="loading" large text color="primary" v-on="on"
+            ><v-btn
+              :disabled="loading"
+              large
+              text
+              color="primary"
+              rounded
+              v-on="on"
               >Add Item <v-icon right>{{ mdiPlusCircleOutline }}</v-icon></v-btn
             >
           </template>

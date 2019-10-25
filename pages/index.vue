@@ -19,7 +19,7 @@ export default {
     WelcomeSheet,
     Search
   },
-  layout: ({ isMobile }) => (isMobile ? 'mobile' : 'default'),
+  layout: 'none',
   head: () => ({
     title: 'Home',
     meta: [

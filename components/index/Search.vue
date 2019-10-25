@@ -1,5 +1,8 @@
 <template>
   <v-row align="center" justify="center">
+    <v-col cols="12" xs="12">
+      <h1 class="text-center">* This is a demo</h1>
+    </v-col>
     <v-col cols="12" xs="12" md="8" lg="5">
       <v-autocomplete
         v-model="select"
@@ -26,7 +29,7 @@
         :loading="isLoading"
         :disabled="!select"
         large
-        icon
+        rounded
         @click="searchMedicine"
         ><v-icon>{{ mdiMagnify }}</v-icon></v-btn
       >

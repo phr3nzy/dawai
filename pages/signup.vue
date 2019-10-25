@@ -2,7 +2,7 @@
   <v-container fluid grid-list-xs>
     <v-layout fill-height row wrap justify-center align-center>
       <v-flex xs12>
-        <v-card class="mx-auto" :loading="loading" max-width="500">
+        <v-card class="mx-auto slight-br" :loading="loading" max-width="500">
           <v-card-title class="title font-weight-regular justify-space-between">
             <span>{{ currentTitle }}</span>
             <v-avatar
@@ -21,6 +21,7 @@
                   :clear-icon="mdiClose"
                   clearable
                   outlined
+                  rounded
                   label="Email"
                   :prepend-inner-icon="mdiEmail"
                   hint="This is the email you will use to login to your Dawai account"
@@ -42,6 +43,7 @@
                   :clear-icon="mdiClose"
                   clearable
                   outlined
+                  rounded
                   type="password"
                 ></v-text-field>
                 <v-text-field
@@ -51,6 +53,7 @@
                   :clear-icon="mdiClose"
                   clearable
                   outlined
+                  rounded
                   type="password"
                 ></v-text-field>
                 <span class="caption grey--text text--darken-1">
@@ -79,7 +82,7 @@
           <!-- <v-divider></v-divider> -->
 
           <v-card-actions class="px-6">
-            <v-btn :disabled="step === 1" large text @click="step--">
+            <v-btn rounded :disabled="step === 1" large text @click="step--">
               Back
             </v-btn>
             <div class="flex-grow-1"></div>
@@ -88,6 +91,7 @@
               color="primary"
               large
               depressed
+              rounded
               @click="nextStep"
             >
               {{ step === 3 ? 'Finished!' : 'Next' }}

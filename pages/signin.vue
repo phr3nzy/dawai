@@ -1,7 +1,7 @@
 <template>
   <v-layout align-center justify-center column>
     <v-flex xs12>
-      <v-card :loading="loading" flat outlined width="500px">
+      <v-card class="slight-br" :loading="loading" flat outlined width="500px">
         <div class="pa-4">
           <v-img
             contain
@@ -19,6 +19,7 @@
               label="Email"
               :prepend-inner-icon="mdiEmail"
               outlined
+              rounded
             />
             <v-text-field
               v-model="password"
@@ -27,9 +28,13 @@
               label="Password"
               :prepend-inner-icon="mdiLock"
               outlined
+              rounded
             />
             <nuxt-link to="/">
               Forgot password?
+            </nuxt-link>
+            <nuxt-link class="float-right" to="/signup">
+              New Here?
             </nuxt-link>
           </v-card-text>
           <v-card-actions class="px-lg-5 px-md-5 px-sm-3">
@@ -45,6 +50,7 @@
               color="primary"
               type="submit"
               large
+              rounded
               @click.stop.prevent="signin"
             >
               Sign In

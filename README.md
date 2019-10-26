@@ -6,7 +6,7 @@ To even contribute more to the Sudanese populous, Dawai is completely Open Sourc
 
 This repository contains the Frontend of Dawai (not the landing page, it's [here](https://www.github.com/phr3nzy/dawai-landing)). Built using Vue, Vuetify & Nuxt!
 
-## Dawai Hosting Costs
+## Dawai's Hosting Costs
 
 To be able to host Dawai efficiently, we opted to use Heroku. They provide a PaaS (Platform-as-a-Service) that gives us many features and addons that saves us time.
 

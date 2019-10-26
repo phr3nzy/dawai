@@ -24,6 +24,29 @@ Learn more about Heroku's pricing [here](https://www.heroku.com/pricing).
 
 If you feel this is overkill, send us a suggestion on a better PaaS. We appreciate all the advice we can get!
 
+## Prerequisites
+- Node >= v10
+- NPM >= v6
+
+## Getting started
+
+```bash
+$ yarn install
+# install dependencies
+
+$ yarn dev
+# start a Nuxt development server @ port 3000
+
+$ yarn test
+# run tests
+
+$ yarn build
+# build files ready for production
+
+$ yarn generate
+# generate static pages
+```
+
 ## Contributions
 
 Helps us make the process of finding medicine easier, anything helps! Currently what needs to be done is:
@@ -34,3 +57,7 @@ Helps us make the process of finding medicine easier, anything helps! Currently 
 - Writing Tests (Unit, Integration, e2e etc.)
 
 That's all! Good fortune.
+
+## Licensing
+
+MIT © Osama Adil

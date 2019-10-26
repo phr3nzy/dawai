@@ -1,7 +1,7 @@
 <template>
   <v-row align="center" justify="center">
-    <v-col cols="12" sm="6" md="4" lg="3">
-      <v-sheet class="transparent pa-5" dark>
+    <v-col cols="12" sm="6" md="3" lg="3">
+      <v-sheet class="transparent" dark>
         <v-row align="center" justify="center">
           <v-card color="transparent" flat>
             <v-icon color="primary" size="160">{{ mdiReceipt }}</v-icon>
@@ -14,8 +14,8 @@
         ></v-sheet
       >
     </v-col>
-    <v-col cols="12" sm="6" md="4" lg="3">
-      <v-sheet class="transparent pa-5" dark>
+    <v-col cols="12" sm="6" md="3" lg="3">
+      <v-sheet class="transparent" dark>
         <v-row align="center" justify="center">
           <v-card color="transparent" flat>
             <v-icon color="primary" size="160">{{ mdiBottleTonicPlus }}</v-icon>
@@ -28,8 +28,8 @@
         ></v-sheet
       >
     </v-col>
-    <v-col cols="12" sm="6" md="4" lg="3">
-      <v-sheet class="transparent pa-5" dark>
+    <v-col cols="12" sm="6" md="3" lg="3">
+      <v-sheet class="transparent" dark>
         <v-row align="center" justify="center">
           <v-card color="transparent" flat>
             <v-icon color="primary" size="160">{{ mdiBell }}</v-icon>

@@ -70,6 +70,7 @@ import {
   mdiBullseyeArrow,
   mdiFormatListBulletedType
 } from '@mdi/js'
+import medicineList from './meds'
 export default {
   inject: ['theme'],
   data() {
@@ -85,15 +86,7 @@ export default {
       mdiChevronDown,
       mdiBullseyeArrow,
       mdiFormatListBulletedType,
-      medicine: [
-        'Panadol',
-        'Panadol Extra',
-        'Panadol Light',
-        'Ibuprofen',
-        'Ibuprofen Extra',
-        'Paracetamol',
-        'Super Paracetamol'
-      ]
+      medicine: medicineList
     }
   },
   watch: {

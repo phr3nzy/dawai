@@ -6,9 +6,9 @@ To even contribute more to the Sudanese populous, Dawai is completely Open Sourc
 
 This repository contains the Frontend of Dawai (not the landing page, it's [here](https://www.github.com/phr3nzy/dawai-landing)). Built using Vue, Vuetify & Nuxt!
 
-## How to contribute to Dawai?
+## Contributions
 
-Fire up a fork and do any and all contributions you'd like, even the smallest things count. When you're done, hit the New PR button and you're all set to go! Currently what needs to be done is:
+Helps us make the process of finding medicine easier, anything helps! Currently what needs to be done is:
 
 - Contributions & community guidelines
 - General Documentation

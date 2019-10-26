@@ -6,17 +6,6 @@ To even contribute more to the Sudanese populous, Dawai is completely Open Sourc
 
 This repository contains the Frontend of Dawai (not the landing page, it's [here](https://www.github.com/phr3nzy/dawai-landing)). Built using Vue, Vuetify & Nuxt!
 
-## Contributions
-
-Helps us make the process of finding medicine easier, anything helps! Currently what needs to be done is:
-
-- Contributions & community guidelines
-- General Documentation
-- Arabic translations (~~Website &~~ Pharmacy Frontend)
-- Writing Tests (Unit, Integration, e2e etc.)
-
-That's all! Good fortune.
-
 ## Dawai Hosting Costs
 
 To be able to host Dawai efficiently, we opted to use Heroku. They provide a PaaS (Platform-as-a-Service) that gives us many features and addons that saves us time.
@@ -34,3 +23,14 @@ To be able to host Dawai efficiently, we opted to use Heroku. They provide a Paa
 Learn more about Heroku's pricing [here](https://www.heroku.com/pricing).
 
 If you feel this is overkill, send us a suggestion on a better PaaS. We appreciate all the advice we can get!
+
+## Contributions
+
+Helps us make the process of finding medicine easier, anything helps! Currently what needs to be done is:
+
+- Contributions & community guidelines
+- General Documentation
+- Arabic translations (~~Website &~~ Pharmacy Frontend)
+- Writing Tests (Unit, Integration, e2e etc.)
+
+That's all! Good fortune.

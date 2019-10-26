@@ -1,4 +1,4 @@
-# Dawai - Medicine Locator and Pharmacy Management Solution for Sudan 💊🇸🇩✨
+# Dawai — The Medicine Platform for Sudan 💊🇸🇩✨
 
 Dawai is a project with an ambition of providing aid to the Sudanese populous in finding medicine. It locates the medicine using a DB with over 4000 medicine records (including brands, categories, manufacturer etc.) that are sold by pharmacies in Sudan, a management UI for Pharmacies to manage their inventory and gives them control over their products' exposure to the public (not a single byte of info is displayed without the pharmacies' owners consent), and a public GraphQL API to use the 4000+ medicine records for research purposes.
 

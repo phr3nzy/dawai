@@ -51,10 +51,10 @@ $ yarn generate
 
 Helps us make the process of finding medicine easier, anything helps! Currently what needs to be done is:
 
-- Contributions & community guidelines
-- General Documentation
-- Arabic translations (~~Website &~~ Pharmacy Frontend)
-- Writing Tests (Unit, Integration, e2e etc.)
+[x] Contributions & community guidelines
+[ ] General Documentation
+[ ] Arabic translations (~~Website &~~ Pharmacy Frontend)
+[ ] Writing Tests (Unit, Integration, e2e etc.)
 
 That's all! Good fortune.
 

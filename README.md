@@ -13,6 +13,7 @@ Fire up a fork and do any and all contributions you'd like, even the smallest th
 - Contributions & community guidelines
 - General Documentation
 - Arabic translations (~~Website &~~ Pharmacy Frontend)
+- Writing Tests (Unit, Integration, e2e etc.)
 
 That's all! Good fortune.
 

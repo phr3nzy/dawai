@@ -20,6 +20,8 @@ That's all! Good fortune.
 
 To be able to host Dawai efficiently, we opted to use Heroku. They provide a PaaS (Platform-as-a-Service) that gives us many features and addons that saves us time.
 
+### Resources that will be provisioned
+
 |          | Plan Name             | Plan Quantity | Plan Price |
 |----------|-----------------------|---------------|------------|
 | Frontend | `STANDARD 1X`         |       1       |    $25/m   |

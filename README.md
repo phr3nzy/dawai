@@ -22,7 +22,7 @@ To be able to host Dawai efficiently, we opted to use Heroku. They provide a Paa
 
 Learn more about Heroku's pricing [here](https://www.heroku.com/pricing).
 
-If you feel this is overkill, send us a suggestion on a better PaaS. We appreciate all the advice we can get!
+If you feel this is overkill, send us a suggestion on a better solution at [dawai@x249.net](mailto:dawai@x249.net). We appreciate all the advice we can get!
 
 ## Prerequisites
 - Node >= v10

@@ -1,5 +1,6 @@
 os: linux
 distro: bionic
+sudo: required
 language: node_js
 notifications:
     email: false
@@ -8,6 +9,8 @@ node_js:
     - lts/*
     - 11
     - 10
+before_install:
+  - sudo apt-get install g++ build-essential
 install: yarn install
 jobs:
     include:

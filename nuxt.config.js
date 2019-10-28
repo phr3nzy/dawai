@@ -62,6 +62,7 @@ export default {
     'nuxt-webfontloader',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
+    'nuxt-leaflet',
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
   ],

@@ -22,7 +22,7 @@
               <v-list-item-subtitle>Owner</v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
-              <v-icon>{{ mdiAccountArrowRight }}</v-icon>
+              <v-icon>{{ mdiAccount }}</v-icon>
             </v-list-item-action>
           </v-list-item>
         </v-list>
@@ -81,7 +81,7 @@
 <script>
 import {
   mdiHome,
-  mdiAccountArrowRight,
+  mdiAccount,
   mdiDesktopMacDashboard,
   mdiPill,
   mdiCashMultiple,
@@ -91,7 +91,7 @@ export default {
   data() {
     return {
       mdiHome,
-      mdiAccountArrowRight,
+      mdiAccount,
       mdiDesktopMacDashboard,
       mdiPill,
       mdiCashMultiple,

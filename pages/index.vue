@@ -1,12 +1,10 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col cols="12" xs="12">
-        <WelcomeSheet />
-      </v-col>
-      <v-col cols="12" xs="12">
-        <Search />
-      </v-col>
+    <v-row justify="center" align="center">
+      <WelcomeSheet />
+    </v-row>
+    <v-row justify="center" align="center">
+      <Search />
     </v-row>
   </v-container>
 </template>

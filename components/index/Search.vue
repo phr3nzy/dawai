@@ -1,53 +1,54 @@
 <template>
-  <v-row align="center" justify="center">
-    <v-col cols="12" sm="12">
-      <v-alert
-        :icon="mdiInformation"
-        border="left"
-        :value="true"
-        type="info"
-        text
-      >
-        This is a demo
-      </v-alert>
-    </v-col>
-    <v-col cols="12" xs="12" md="8" lg="5">
-      <v-autocomplete
-        v-model="select"
-        color="primary"
-        label="Search for Medicine"
-        hint="Try 'Panadol'..."
-        :items="items"
-        :loading="loading"
-        :search-input.sync="search"
-        :prepend-inner-icon="mdiPill"
-        :clear-icon="mdiClose"
-        loader-height="3"
-        hide-details
-        hide-no-data
-        cache-items
-        clearable
-        autofocus
-        solo
-      ></v-autocomplete>
-    </v-col>
-    <v-col class="text-center" cols="12" xs="12" md="12" lg="1">
-      <v-btn
-        color="primary"
-        :loading="isLoading"
-        :disabled="!select"
-        large
-        rounded
-        @click="searchMedicine"
-        ><v-icon>{{ mdiMagnify }}</v-icon></v-btn
-      >
-    </v-col>
-    <skeleton-loading v-if="isLoading" />
-    <search-result
-      v-if="!isLoading && showMapResult"
-      :pharmacies="pharmacies"
-    />
-  </v-row>
+  <v-col cols="12" sm="12">
+    <v-row justify="center" align="center">
+      <v-col cols="12" sm="6">
+        <v-alert
+          :icon="mdiInformation"
+          border="left"
+          :value="true"
+          type="info"
+          text
+        >
+          This is a demo
+        </v-alert>
+      </v-col>
+    </v-row>
+    <v-row align="center" justify="center">
+      <v-col cols="12" xs="12" md="8" lg="5">
+        <v-autocomplete
+          v-model="select"
+          color="primary"
+          label="Search for Medicine"
+          hint="Try 'Panadol'..."
+          :items="items"
+          :loading="loading"
+          :search-input.sync="search"
+          :prepend-inner-icon="mdiPill"
+          :clear-icon="mdiClose"
+          loader-height="3"
+          hide-details
+          hide-no-data
+          cache-items
+          clearable
+          autofocus
+          solo
+        ></v-autocomplete>
+      </v-col>
+      <v-col class="text-center" cols="12" xs="12" md="12" lg="1">
+        <v-btn
+          color="primary"
+          :loading="isLoading"
+          :disabled="!select"
+          large
+          rounded
+          @click="searchMedicine"
+          ><v-icon>{{ mdiMagnify }}</v-icon></v-btn
+        >
+      </v-col>
+      <skeleton-loading v-if="isLoading"/>
+      <search-result v-if="!isLoading && showMapResult" :pharmacies="pharmacies"
+    /></v-row>
+  </v-col>
 </template>
 
 <script>

@@ -1,7 +1,15 @@
 <template>
   <v-row align="center" justify="center">
-    <v-col cols="12" xs="12">
-      <h1 class="text-center">* This is a demo</h1>
+    <v-col cols="12" sm="12">
+      <v-alert
+        :icon="mdiInformation"
+        border="left"
+        :value="true"
+        type="info"
+        text
+      >
+        This is a demo
+      </v-alert>
     </v-col>
     <v-col cols="12" xs="12" md="8" lg="5">
       <v-autocomplete
@@ -49,7 +57,8 @@ import {
   mdiClose,
   mdiChevronDown,
   mdiBullseyeArrow,
-  mdiFormatListBulletedType
+  mdiFormatListBulletedType,
+  mdiInformation
 } from '@mdi/js'
 import medicineList from './meds'
 import SearchResult from '@/components/index/SearchResult'
@@ -95,6 +104,7 @@ export default {
       mdiChevronDown,
       mdiBullseyeArrow,
       mdiFormatListBulletedType,
+      mdiInformation,
       medicine: medicineList
     }
   },

@@ -8,6 +8,7 @@ node_js:
     - lts/*
     - 11
     - 10
+install: yarn install
 jobs:
     include:
         - stage: build

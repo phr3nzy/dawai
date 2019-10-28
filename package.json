@@ -42,6 +42,7 @@
     "@nuxtjs/eslint-module": "^1.1.0",
     "@nuxtjs/vuetify": "^1.9.0",
     "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
@@ -50,6 +51,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.8",
     "jest": "^24.9.0",
+    "jest-canvas-mock": "^2.1.2",
     "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
     "vue-jest": "^3.0.5"

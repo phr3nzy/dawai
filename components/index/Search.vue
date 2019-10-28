@@ -65,6 +65,7 @@ import medicineList from './meds'
 import SearchResult from '@/components/index/SearchResult'
 import SkeletonLoading from '@/components/index/SkeletonLoading'
 export default {
+  name: 'Search',
   components: {
     SkeletonLoading,
     SearchResult

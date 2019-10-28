@@ -1,22 +1,18 @@
 os: linux
 distro: bionic
-sudo: required
 language: node_js
 notifications:
     email: false
 node_js:
-    - node
-    - lts/*
+    - 12
     - 11
     - 10
-before_install:
-  - sudo apt-get install g++ build-essential
 install: yarn install
 jobs:
     include:
-        - stage: build
-          script: yarn build
-        # - stage: test
-        #   script: yarn test
+        # - stage: build
+        #   script: yarn build
+        - stage: test
+          script: yarn test
         # - stage: coverage
         #   script: yarn test:coverage

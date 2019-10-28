@@ -1,0 +1,18 @@
+os: linux
+distro: bionic
+language: node_js
+notifications:
+    email: false
+node_js:
+    - node
+    - lts/*
+    - 11
+    - 10
+jobs:
+    include:
+        - stage: build
+          script: yarn build
+        # - stage: test
+        #   script: yarn test
+        # - stage: coverage
+        #   script: yarn test:coverage

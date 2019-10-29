@@ -8,21 +8,12 @@ This repository contains the [Frontend](https://dawai-ph.herokuapp.com/) of Dawa
 
 ## Dawai's Hosting Costs
 
-To be able to host Dawai efficiently, we opted to use Heroku. They provide a PaaS (Platform-as-a-Service) that gives us many features and addons that saves us time.
+To be able to host Dawai efficiently, ~~we opted to use Heroku. They provide a PaaS (Platform-as-a-Service) that gives us many features and addons that saves us time.~~ we are considering a new option that is marginally superior.
 
 ### Resources that will be provisioned
 
-|          | Plan Name             | Plan Quantity | Plan Price |
-|----------|-----------------------|---------------|------------|
-| Frontend | `STANDARD 1X`         |       1       |    $25/m   |
-| Backend  | `STANDARD 2X`         |       2       |    $50/m   |
-| Database | `POSTGRES STANDARD 2` |       1       |   $200/m   |
-| Total    |                       |               |   $325/m   |
-
-
-Learn more about Heroku's pricing [here](https://www.heroku.com/pricing).
-
-If you feel this is overkill, send us a suggestion on a better solution at [dawai@x249.net](mailto:dawai@x249.net). We appreciate all the advice we can get!
+We are working on the infrastrucutre strategy, will update as soon as we reach solid grounds.
+> Hint: Famous river
 
 ## Prerequisites
 - Node >= v10

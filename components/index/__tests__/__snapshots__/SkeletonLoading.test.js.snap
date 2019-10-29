@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`SkeletonLoading.vue should mount the skeleton loaders and compare snapshots 1`] = `"<v-col cols=\\"12\\" sm=\\"12\\" class=\\"mt-12\\"><v-skeleton-loader max-width=\\"auto\\" type=\\"list-item-avatar-three-line\\" class=\\"slight-br my-3\\"></v-skeleton-loader> <v-skeleton-loader max-width=\\"auto\\" type=\\"list-item-avatar-three-line\\" class=\\"slight-br my-3\\"></v-skeleton-loader> <v-skeleton-loader max-width=\\"auto\\" type=\\"list-item-avatar-three-line\\" class=\\"slight-br my-3\\"></v-skeleton-loader> <v-skeleton-loader max-width=\\"auto\\" type=\\"image\\" class=\\"slight-br\\"></v-skeleton-loader></v-col>"`;

@@ -18,16 +18,17 @@ export default {
     Search
   },
   layout: ({ isMobile }) => (isMobile ? 'mobile' : 'default'),
-  head: () => ({
-    title: 'Home',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'Search for any medicine you need using Dawai! We connect you with all the pharmacies we can to help you find whatever medicine you need efficiently.'
-      }
-    ]
-  })
+  head() {
+    return {
+      title: this.$t('pages.index.meta.title'),
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('pages.index.meta.description')
+        }
+      ]
+    }
+  }
 }
 </script>

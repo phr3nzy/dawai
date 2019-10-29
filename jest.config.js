@@ -14,5 +14,5 @@ module.exports = {
     '<rootDir>/components/**/*.vue',
     '<rootDir>/pages/**/*.vue'
   ],
-  setupFiles: ["jest-canvas-mock"]
+  setupFiles: ['jest-canvas-mock']
 }

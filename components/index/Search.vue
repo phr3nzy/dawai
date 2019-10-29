@@ -9,7 +9,7 @@
           type="info"
           text
         >
-          This is a demo
+          {{ $t('pages.index.demoText') }}
         </v-alert>
       </v-col>
     </v-row>
@@ -18,8 +18,7 @@
         <v-autocomplete
           v-model="select"
           color="primary"
-          label="Search for Medicine"
-          hint="Try 'Panadol'..."
+          :label="$t('pages.index.autocompletePlaceholder')"
           :items="items"
           :loading="loading"
           :search-input.sync="search"

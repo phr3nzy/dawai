@@ -6,17 +6,9 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + 'Dawai',
-    title: 'Dawai',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'Keep tabs on medicine on inventory, track your performance, manage expenses and finances, create invoices and more!'
-      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -46,6 +38,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     'nuxt-helmet',
+    'nuxt-i18n',
     [
       'nuxt-social-meta',
       {
@@ -66,6 +59,38 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
   ],
+  /*
+   ** I18n module configuration
+   */
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        name: 'English',
+        iso: 'en-US',
+        file: 'en-US.js'
+      },
+      {
+        code: 'ar',
+        name: 'العربية',
+        iso: 'ar-SD',
+        file: 'ar-SD.js'
+      }
+    ],
+    langDir: 'languages/',
+    lazy: true,
+    strategy: 'prefix_except_default',
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en'
+    },
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      alwaysRedirect: false,
+      fallbackLocale: 'en'
+    }
+  },
   /*
    ** Manifest setup
    */

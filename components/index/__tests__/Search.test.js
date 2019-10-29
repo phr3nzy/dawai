@@ -15,7 +15,7 @@ describe('Search.vue', () => {
     vuetify = new Vuetify()
   })
 
-  it('should have a custom search and match snapshot', done => {
+  it('should have a custom search and match snapshot', (done) => {
     const wrapper = mount(Search, {
       localVue,
       vuetify
@@ -25,7 +25,6 @@ describe('Search.vue', () => {
     expect(wrapper.html()).toMatchSnapshot()
 
     const alert = wrapper.find('v-alert')
-    console.log(alert)
 
     expect(alert.text()).toBe('This is a demo')
     done()

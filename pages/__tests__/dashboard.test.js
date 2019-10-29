@@ -15,7 +15,7 @@ describe('dashboard.vue', () => {
     vuetify = new Vuetify()
   })
 
-  it('should render', done => {
+  it('should render', (done) => {
     const wrapper = mount(dashboard, {
       localVue,
       vuetify

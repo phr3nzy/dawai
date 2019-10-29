@@ -15,7 +15,7 @@ describe('finance.vue', () => {
     vuetify = new Vuetify()
   })
 
-  it('should render', done => {
+  it('should render', (done) => {
     const wrapper = mount(finance, {
       localVue,
       vuetify

@@ -15,7 +15,7 @@ describe('profile.vue', () => {
     vuetify = new Vuetify()
   })
 
-  it('should render', done => {
+  it('should render', (done) => {
     const wrapper = mount(profile, {
       localVue,
       vuetify

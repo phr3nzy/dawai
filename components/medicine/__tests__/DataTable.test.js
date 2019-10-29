@@ -15,7 +15,7 @@ describe('DataTable.vue', () => {
     vuetify = new Vuetify()
   })
 
-  it('should render data table with static data', done => {
+  it('should render data table with static data', (done) => {
     const wrapper = mount(DataTable, {
       localVue,
       vuetify

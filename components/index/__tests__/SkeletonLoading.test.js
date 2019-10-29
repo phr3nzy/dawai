@@ -15,7 +15,7 @@ describe('SkeletonLoading.vue', () => {
     vuetify = new Vuetify()
   })
 
-  it('should mount the skeleton loaders and compare snapshots', done => {
+  it('should mount the skeleton loaders and compare snapshots', (done) => {
     const wrapper = mount(SkeletonLoading, {
       localVue,
       vuetify

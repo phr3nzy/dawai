@@ -15,7 +15,7 @@ describe('signin.vue', () => {
     vuetify = new Vuetify()
   })
 
-  it('should render', done => {
+  it('should render', (done) => {
     const wrapper = mount(signin, {
       localVue,
       vuetify

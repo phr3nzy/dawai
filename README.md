@@ -49,6 +49,31 @@ Helps us make the process of finding medicine easier, anything helps! Currently 
 
 That's all! Good fortune.
 
-## Licensing
+## How to contribute
+### Steps
+  1. Check that no one else is working on the thing you want to do in the issues page
+  2. Create a new issue with an appropiate name describing what you will be doing
+  3. [Fork and Setup Repo](#fork-and-setup-repo), do your work, then submit a pull request
+
+### Fork and Setup Repo
+  1. Fork repo.
+  2. Clone forked repo on your local machine.
+  3. `git remote add upstream https://github.com/phr3nzy/dawai.git` to add original repo as upstream.
+  4. `yarn install` to install the website's npm dependencies.
+
+### Create a branch
+  1. `git checkout master` from any folder in your local 1dawai` repository
+  2. `git pull upstream master` to ensure you have the latest main code
+  3. `git checkout -b the-name-of-my-branch` (replacing the-name-of-my-branch with a suitable name) to create a branch
+  4. Make your changes.
+
+#### Push it
+
+1. `git add -A && git commit -m "My message"` (replacing `My message` with a commit message, such as `Added Search Unit test`) to stage and commit your changes,
+2. `git push my-fork-name the-name-of-my-branch`
+3. Go to the [dawai repo](https://github.com/phr3nzy/dawai) and you should see recently pushed branches.
+4. Follow GitHub's instructions to submit the pull request.
+
+## Licening
 
 MIT © Osama Adil

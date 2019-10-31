@@ -67,7 +67,7 @@ That's all! Good fortune.
   3. `git checkout -b the-name-of-my-branch` (replacing the-name-of-my-branch with a suitable name) to create a branch
   4. Make your changes.
 
-#### Push it
+### Push it
 
 1. `git add -A && git commit -m "My message"` (replacing `My message` with a commit message, such as `Added Search Unit test`) to stage and commit your changes,
 2. `git push my-fork-name the-name-of-my-branch`
